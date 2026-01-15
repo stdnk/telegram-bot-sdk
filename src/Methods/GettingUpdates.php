@@ -59,12 +59,12 @@ trait GettingUpdates
      *
      * @param array{
      * 	url: string,
-     * 	certificate: InputFile,
-     * 	ip_address: string,
-     * 	max_connections: int,
-     * 	allowed_updates: string[],
-     * 	drop_pending_updates: bool,
-     *  secret_token: string,
+     * 	certificate?: InputFile,
+     * 	ip_address?: string,
+     * 	max_connections?: int,
+     * 	allowed_updates?: string[],
+     * 	drop_pending_updates?: bool,
+     *  secret_token?: string,
      * } $params
      */
     public function setWebhook(array $params): bool

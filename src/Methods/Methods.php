@@ -226,6 +226,27 @@ trait Methods
     }
 
     /**
+     * Send a partial message.
+     *
+     * @link https://core.telegram.org/bots/api#sendmessagedraft
+     *
+     * @param array{
+     *    chat_id: int|string,
+     *    message_thread_id: int,
+     *    draft_id: int,
+     *    text: string,
+     *    parse_mode: string,
+     *    entities: MessageEntity[],
+     * } $params
+     * @return true
+     */
+    public function sendMessageDraft(array $params): bool
+    {
+        return $this->post('sendMessageDraft', $params)->getResult();
+    }
+
+
+    /**
      * Send Photo.
      *
      * On success, the sent Message is returned.
